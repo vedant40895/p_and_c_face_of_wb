@@ -81,11 +81,11 @@ export default function Footer() {
             <ul className="space-y-4 text-base">
               <li className="text-foreground font-medium flex items-center gap-3 hover:text-accent transition-colors cursor-pointer">
                 <span className="text-xl">📧</span> 
-                <span>info@pcface.com</span>
+                <span>bilkesperveen@gmail.com</span>
               </li>
               <li className="text-foreground font-medium flex items-center gap-3 hover:text-accent transition-colors cursor-pointer">
                 <span className="text-xl">📱</span> 
-                <span>+91 XXXXX XXXXX</span>
+                <span>+91 79809 01539</span>
               </li>
               <li className="text-foreground font-medium flex items-center gap-3 hover:text-accent transition-colors cursor-pointer">
                 <span className="text-xl">📍</span> 

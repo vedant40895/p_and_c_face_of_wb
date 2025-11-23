@@ -9,7 +9,6 @@ interface Season {
   year: number
   image: string
   description: string
-  highlights: string[]
 }
 
 export default function SeasonCard({ season, index }: { season: Season; index: number }) {
@@ -52,22 +51,12 @@ export default function SeasonCard({ season, index }: { season: Season; index: n
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-md">{season.description}</p>
 
-            {/* Highlights */}
-            <div className="pt-4 space-y-3">
-              {season.highlights.map((highlight, idx) => (
-                <div key={idx} className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-accent rounded-full flex-shrink-0" />
-                  <p className="text-foreground font-medium">{highlight}</p>
-                </div>
-              ))}
-            </div>
-
             {/* CTA Button */}
-            <div className="pt-6">
+            {/* <div className="pt-6">
               <button className="inline-block px-8 py-3 bg-accent text-accent-foreground rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
                 Learn More
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
