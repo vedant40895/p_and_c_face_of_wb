@@ -1,10 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(req: NextRequest) {
   try {
+    // Check for API key
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) {
+      console.error('RESEND_API_KEY environment variable is not set')
+      return NextResponse.json(
+        { error: 'Email service configuration error' },
+        { status: 500 }
+      )
+    }
+
+    // Initialize Resend with the API key
+    const resend = new Resend(apiKey)
+    
     const formData = await req.json()
 
     // Validate required fields
