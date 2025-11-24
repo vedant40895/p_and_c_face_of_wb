@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="text-2xl font-serif font-bold">
-              <span className="text-accent">P&C</span> <span className="text-foreground">Face</span>
+              <span className="text-accent">P&C</span> <span className="text-foreground">Face of West Bengal</span>
             </h3>
             <p className="text-sm text-muted-foreground">
               Discovering the most talented and graceful faces of West Bengal
