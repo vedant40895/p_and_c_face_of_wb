@@ -19,11 +19,18 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/">
-            <div className="flex-shrink-0">
-              <h1 className="text-2xl md:text-3xl font-serif font-bold">
-                <span className="text-accent">P&C</span> <span className="text-foreground">Face</span>
-              </h1>
-              <p className="text-xs text-muted-foreground">Face of West Bengal</p>
+            <div className="flex items-center gap-3 flex-shrink-0">
+              <img 
+                src="/logo.jpg" 
+                alt="P&C Group Logo" 
+                className="w-10 h-10 md:w-12 md:h-12"
+              />
+              <div>
+                <h1 className="text-2xl md:text-3xl font-serif font-bold">
+                  <span className="text-accent">P&C</span>
+                </h1>
+                <p className="text-xs text-muted-foreground">Face of West Bengal</p>
+              </div>
             </div>
           </Link>
 

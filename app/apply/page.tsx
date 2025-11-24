@@ -1,4 +1,4 @@
-"use client"
+ "use client"
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -23,10 +23,12 @@ export default function ApplyPage() {
     weight: "",
     education: "",
     profession: "",
+    interests: [] as string[],
     experience: "",
     talents: "",
     whyParticipate: "",
     socialMedia: "",
+    disclaimerAgreed: false,
   })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -36,6 +38,22 @@ export default function ApplyPage() {
     })
   }
 
+  const handleInterestChange = (interest: string, checked: boolean) => {
+    setFormData(prev => ({
+      ...prev,
+      interests: checked 
+        ? [...prev.interests, interest]
+        : prev.interests.filter(i => i !== interest)
+    }))
+  }
+
+  const handleDisclaimerChange = (checked: boolean) => {
+    setFormData(prev => ({
+      ...prev,
+      disclaimerAgreed: checked
+    }))
+  }
+
   const validateForm = () => {
     const requiredFields = [
       'fullName', 'email', 'phone', 'age', 'city', 'height', 
@@ -43,9 +61,20 @@ export default function ApplyPage() {
     ]
     
     for (const field of requiredFields) {
-      if (!formData[field as keyof typeof formData].trim()) {
+      const value = formData[field as keyof typeof formData]
+      if (typeof value === 'string' && !value.trim()) {
         return false
       }
+    }
+    
+    // Check if at least one interest is selected
+    if (formData.interests.length === 0) {
+      return false
+    }
+    
+    // Check if disclaimer is agreed
+    if (!formData.disclaimerAgreed) {
+      return false
     }
     
     // Basic email validation
@@ -69,7 +98,7 @@ export default function ApplyPage() {
     if (!validateForm()) {
       toast({
         title: "Form Validation Error",
-        description: "Please fill all required fields correctly and ensure age is between 18-30.",
+        description: "Please fill all required fields correctly, select at least one interest, agree to the fee disclaimer, and ensure age is between 18-30.",
         variant: "destructive",
       })
       return
@@ -124,10 +153,12 @@ export default function ApplyPage() {
         weight: "",
         education: "",
         profession: "",
+        interests: [],
         experience: "",
         talents: "",
         whyParticipate: "",
         socialMedia: "",
+        disclaimerAgreed: false,
       })
       
     } catch (error) {
@@ -341,6 +372,32 @@ export default function ApplyPage() {
                   </div>
                   
                   <div className="space-y-2 sm:space-y-3 md:col-span-2">
+                    <Label className="text-sm font-medium text-foreground">
+                      What are you interested in? *
+                    </Label>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+                      {[
+                        { id: 'pageant', label: 'Pageant Show' },
+                        { id: 'calendar', label: 'Calendar Shoot' },
+                        { id: 'campaign', label: 'Campaign Shoots' }
+                      ].map((option) => (
+                        <label
+                          key={option.id}
+                          className="flex items-center gap-3 p-3 sm:p-4 border border-border rounded-lg cursor-pointer hover:bg-accent/5 transition-colors"
+                        >
+                          <input
+                            type="checkbox"
+                            checked={formData.interests.includes(option.id)}
+                            onChange={(e) => handleInterestChange(option.id, e.target.checked)}
+                            className="w-4 h-4 text-accent border-border rounded focus:ring-accent focus:ring-2"
+                          />
+                          <span className="text-sm font-medium text-foreground">{option.label}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2 sm:space-y-3 md:col-span-2">
                     <Label htmlFor="experience" className="text-sm font-medium text-foreground">
                       Previous Pageant/Modeling Experience
                     </Label>
@@ -411,6 +468,41 @@ export default function ApplyPage() {
                       placeholder="@your_instagram_handle or Facebook profile"
                       className="h-10 sm:h-11 text-sm sm:text-base"
                     />
+                  </div>
+                </div>
+              </div>
+
+              {/* Fee Disclaimer Section */}
+              <div className="space-y-6 sm:space-y-8">
+                <div className="ml-0 sm:ml-14">
+                  <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4 sm:p-6">
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-6 h-6 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5">
+                          ⚠️
+                        </div>
+                        <div className="space-y-3">
+                          <p className="text-sm sm:text-base text-amber-800 dark:text-amber-200 leading-relaxed">
+                            Before proceeding, please note that <span className="font-semibold">all projects, sessions, and campaigns involve associated fees</span>.
+                            <br />
+                            By filling out the form, <span className="font-semibold">you acknowledge and agree</span> to the payment of these fees as applicable.
+                          </p>
+                          
+                          <label className="flex items-start gap-3 cursor-pointer group">
+                            <input
+                              type="checkbox"
+                              checked={formData.disclaimerAgreed}
+                              onChange={(e) => handleDisclaimerChange(e.target.checked)}
+                              className="w-5 h-5 text-accent border-amber-300 dark:border-amber-600 rounded focus:ring-accent focus:ring-2 mt-0.5 flex-shrink-0"
+                              required
+                            />
+                            <span className="text-sm font-medium text-amber-800 dark:text-amber-200 group-hover:text-amber-900 dark:group-hover:text-amber-100 transition-colors">
+                              ✔ Click "Agree" to confirm and continue.
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

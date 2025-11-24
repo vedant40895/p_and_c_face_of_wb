@@ -11,7 +11,7 @@ export default function Home() {
     {
       id: 1,
       title: "Season 1",
-      year: 2020,
+      year: 2021,
       image: "/season-1.jpg",
       description:
         "The inaugural season that launched P&C Face of West Bengal, discovering fresh talent and establishing our legacy.",
@@ -19,7 +19,7 @@ export default function Home() {
     {
       id: 2,
       title: "Season 2",
-      year: 2021,
+      year: 2022,
       image: "/season-2.jpg",
       description:
         "Expansion and elevated excellence, bringing the pageant to new heights with international standards.",
