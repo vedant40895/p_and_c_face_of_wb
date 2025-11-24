@@ -26,21 +26,21 @@ export default function Footer() {
                   <span className="text-lg">🏠</span> Home
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="text-foreground font-medium hover:text-accent transition-colors flex items-center gap-3">
                   <span className="text-lg">ℹ️</span> About Us
                 </a>
-              </li>
+              </li> */}
               <li>
-                <a href="#" className="text-foreground font-medium hover:text-accent transition-colors flex items-center gap-3">
+                <a href="/apply" className="text-foreground font-medium hover:text-accent transition-colors flex items-center gap-3">
                   <span className="text-lg">📝</span> Apply Now
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="text-foreground font-medium hover:text-accent transition-colors flex items-center gap-3">
                   <span className="text-lg">📞</span> Contact
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -51,25 +51,21 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4 text-base">
               <li>
-                <a href="#" className="text-foreground font-medium hover:text-accent transition-colors flex items-center gap-3">
+                <a href="https://www.instagram.com/pcfaceofwestbengal/" className="text-foreground font-medium hover:text-accent transition-colors flex items-center gap-3">
                   <span className="text-lg">📷</span> Instagram
                 </a>
               </li>
               <li>
-                <a href="#" className="text-foreground font-medium hover:text-accent transition-colors flex items-center gap-3">
+                <a href="https://www.facebook.com/PCArtArena/" className="text-foreground font-medium hover:text-accent transition-colors flex items-center gap-3">
                   <span className="text-lg">📘</span> Facebook
                 </a>
               </li>
               <li>
-                <a href="#" className="text-foreground font-medium hover:text-accent transition-colors flex items-center gap-3">
-                  <span className="text-lg">🎥</span> YouTube
+                <a href="https://www.linkedin.com/company/pcartarena/" className="text-foreground font-medium hover:text-accent transition-colors flex items-center gap-3">
+                  <span className="text-lg">💼</span> LinkedIn
                 </a>
               </li>
-              <li>
-                <a href="#" className="text-foreground font-medium hover:text-accent transition-colors flex items-center gap-3">
-                  <span className="text-lg">🐦</span> Twitter
-                </a>
-              </li>
+              
             </ul>
           </div>
 
@@ -78,18 +74,18 @@ export default function Footer() {
             <h4 className="font-bold text-foreground text-lg flex items-center gap-2">
               <span className="text-accent">📞</span> Contact Us
             </h4>
-            <ul className="space-y-4 text-base">
-              <li className="text-foreground font-medium flex items-center gap-3 hover:text-accent transition-colors cursor-pointer">
-                <span className="text-xl">📧</span> 
-                <span>bilkesperveen@gmail.com</span>
+            <ul className="space-y-4 text-sm sm:text-base">
+              <li className="text-foreground font-medium flex items-start gap-3 hover:text-accent transition-colors cursor-pointer">
+                <span className="text-xl flex-shrink-0 mt-0.5">📧</span> 
+                <span className="break-all text-xs sm:text-sm md:text-base leading-relaxed">faceofwestbengal@gmail.com</span>
               </li>
               <li className="text-foreground font-medium flex items-center gap-3 hover:text-accent transition-colors cursor-pointer">
-                <span className="text-xl">📱</span> 
-                <span>+91 79809 01539</span>
+                <span className="text-xl flex-shrink-0">📱</span> 
+                <span className="text-sm sm:text-base">+91 79809 01539</span>
               </li>
               <li className="text-foreground font-medium flex items-center gap-3 hover:text-accent transition-colors cursor-pointer">
-                <span className="text-xl">📍</span> 
-                <span>Kolkata, West Bengal</span>
+                <span className="text-xl flex-shrink-0">📍</span> 
+                <span className="text-sm sm:text-base">Kolkata, West Bengal</span>
               </li>
             </ul>
           </div>
