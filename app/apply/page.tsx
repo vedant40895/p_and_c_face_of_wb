@@ -379,7 +379,8 @@ export default function ApplyPage() {
                       {[
                         { id: 'pageant', label: 'Pageant Show' },
                         { id: 'calendar', label: 'Calendar Shoot' },
-                        { id: 'campaign', label: 'Campaign Shoots' }
+                        { id: 'campaign', label: 'Campaign Shoots' },
+                        { id: 'personal-grooming-sessions', label: 'Personal Grooming Sessions' }
                       ].map((option) => (
                         <label
                           key={option.id}

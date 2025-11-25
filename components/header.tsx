@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: "smooth" })
-    setIsOpen(false)
-  }
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth" });
+    setIsOpen(false);
+  };
 
   return (
     <header className=" z-50 bg-pink-200 backdrop-blur-sm border-b border-border">
@@ -20,16 +20,18 @@ export default function Header() {
           {/* Logo */}
           <Link href="/">
             <div className="flex items-center gap-3 flex-shrink-0">
-              <img 
-                src="/logo.jpg" 
-                alt="P&C Group Logo" 
+              <img
+                src="/logo.jpg"
+                alt="P&C Group Logo"
                 className="w-10 h-10 md:w-12 md:h-12"
               />
               <div>
                 <h1 className="text-2xl md:text-3xl font-serif font-bold">
                   <span className="text-accent">P&C</span>
                 </h1>
-                <p className="text-xs text-muted-foreground">Face of West Bengal</p>
+                <p className="text-xs text-muted-foreground">
+                  Face of West Bengal
+                </p>
               </div>
             </div>
           </Link>
@@ -58,6 +60,22 @@ export default function Header() {
             >
               Past Seasons
             </button>
+            <Link href="/other-projects">
+              <button
+                onClick={() => scrollToSection("other-projects")}
+                className="text-sm font-medium hover:text-accent transition-colors"
+              >
+                Other Projects
+              </button>
+            </Link>
+            <Link href="/director-desk">
+              <button
+                onClick={() => scrollToSection("director-desk")}
+                className="text-sm font-medium hover:text-accent transition-colors"
+              >
+                Director's desk
+              </button>
+            </Link>
             <button
               onClick={() => scrollToSection("contact")}
               className="px-6 py-2 bg-accent text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
@@ -72,7 +90,11 @@ export default function Header() {
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md hover:bg-muted"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -110,10 +132,9 @@ export default function Header() {
             >
               Contact
             </button>
-            
-            </div>
+          </div>
         )}
       </nav>
     </header>
-  )
+  );
 }
