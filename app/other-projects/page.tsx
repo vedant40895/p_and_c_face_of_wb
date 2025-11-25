@@ -23,46 +23,7 @@ export default function OtherProjectsPage() {
       icon: Calendar,
       category: "Photography",
       color: "from-blue-500 to-cyan-500",
-      svgPlaceholder: (
-        <svg
-          className="w-full h-full"
-          viewBox="0 0 400 300"
-          fill="none"
-          xmlns="/eng-calender.jpg"
-        >
-          <rect width="400" height="300" fill="url(#gradient1)" />
-          <defs>
-            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#3b82f6" />
-              <stop offset="100%" stopColor="#06b6d4" />
-            </linearGradient>
-          </defs>
-          <rect
-            x="50"
-            y="50"
-            width="300"
-            height="200"
-            rx="10"
-            fill="white"
-            fillOpacity="0.9"
-          />
-          <rect x="70" y="70" width="60" height="40" rx="5" fill="#3b82f6" />
-          <rect x="150" y="70" width="60" height="40" rx="5" fill="#3b82f6" />
-          <rect x="230" y="70" width="60" height="40" rx="5" fill="#3b82f6" />
-          <rect x="310" y="70" width="30" height="40" rx="5" fill="#3b82f6" />
-          <text
-            x="200"
-            y="150"
-            textAnchor="middle"
-            className="fill-blue-600 text-lg font-bold"
-          >
-            English Calendar
-          </text>
-          <circle cx="100" cy="180" r="15" fill="#06b6d4" />
-          <circle cx="140" cy="180" r="15" fill="#06b6d4" />
-          <circle cx="180" cy="180" r="15" fill="#06b6d4" />
-        </svg>
-      ),
+      image: "/eng-calender.jpg",
     },
     {
       id: 2,
@@ -72,51 +33,7 @@ export default function OtherProjectsPage() {
       icon: Calendar,
       category: "Cultural",
       color: "from-orange-500 to-red-500",
-      svgPlaceholder: (
-        <svg
-          className="w-full h-full"
-          viewBox="0 0 400 300"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="400" height="300" fill="url(#gradient2)" />
-          <defs>
-            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#f97316" />
-              <stop offset="100%" stopColor="#ef4444" />
-            </linearGradient>
-          </defs>
-          <rect
-            x="50"
-            y="50"
-            width="300"
-            height="200"
-            rx="10"
-            fill="white"
-            fillOpacity="0.9"
-          />
-          <path d="M200 80 L220 120 L180 120 Z" fill="#f97316" />
-          <circle
-            cx="200"
-            cy="140"
-            r="30"
-            fill="none"
-            stroke="#ef4444"
-            strokeWidth="3"
-          />
-          <text
-            x="200"
-            y="180"
-            textAnchor="middle"
-            className="fill-orange-600 text-lg font-bold"
-          >
-            বাংলা ক্যালেন্ডার
-          </text>
-          <rect x="80" y="200" width="20" height="20" fill="#f97316" />
-          <rect x="120" y="200" width="20" height="20" fill="#ef4444" />
-          <rect x="160" y="200" width="20" height="20" fill="#f97316" />
-        </svg>
-      ),
+      image: "/beng-calender.jpg",
     },
     {
       id: 3,
@@ -409,7 +326,16 @@ export default function OtherProjectsPage() {
               >
                 {/* Project Image/SVG */}
                 <div className="relative h-48 overflow-hidden">
-                  <div className="w-full h-full">{project.svgPlaceholder}</div>
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full">{project.svgPlaceholder}</div>
+                  )}
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
 
@@ -421,13 +347,13 @@ export default function OtherProjectsPage() {
                   </div>
 
                   {/* Icon */}
-                  <div className="absolute top-4 right-4">
+                  {/* <div className="absolute top-4 right-4">
                     <div
                       className={`w-10 h-10 bg-gradient-to-br ${project.color} rounded-full flex items-center justify-center shadow-lg`}
                     >
                       <IconComponent className="w-5 h-5 text-white" />
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Project Content */}
