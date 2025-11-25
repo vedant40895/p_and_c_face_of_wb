@@ -43,47 +43,7 @@ export default function OtherProjectsPage() {
       icon: Sparkles,
       category: "Festival",
       color: "from-purple-500 to-pink-500",
-      svgPlaceholder: (
-        <svg
-          className="w-full h-full"
-          viewBox="0 0 400 300"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="400" height="300" fill="url(#gradient3)" />
-          <defs>
-            <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#a855f7" />
-              <stop offset="100%" stopColor="#ec4899" />
-            </linearGradient>
-          </defs>
-          <rect
-            x="50"
-            y="60"
-            width="300"
-            height="180"
-            rx="15"
-            fill="white"
-            fillOpacity="0.9"
-          />
-          <path
-            d="M200 80 L210 100 L230 100 L216 114 L222 134 L200 122 L178 134 L184 114 L170 100 L190 100 Z"
-            fill="#a855f7"
-          />
-          <circle cx="150" cy="140" r="8" fill="#ec4899" />
-          <circle cx="250" cy="140" r="8" fill="#ec4899" />
-          <circle cx="180" cy="180" r="6" fill="#a855f7" />
-          <circle cx="220" cy="180" r="6" fill="#a855f7" />
-          <text
-            x="200"
-            y="210"
-            textAnchor="middle"
-            className="fill-purple-600 text-lg font-bold"
-          >
-            Durga Puja
-          </text>
-        </svg>
-      ),
+      image : "/durga-puja-shoot.jpg",
     },
     {
       id: 4,
