@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/header";
-import { Instagram, Facebook, Trophy, Users, Star, Target, Rocket, Phone, Sparkles, ArrowRight } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Trophy, Users, Star, Target, Rocket, Phone, Sparkles, ArrowRight } from "lucide-react";
 
 export default function DirectorDeskPage() {
   const scrollToConnect = () => {
@@ -59,17 +59,17 @@ export default function DirectorDeskPage() {
               </h2>
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 bg-accent text-white rounded-full text-sm font-medium">
-                  Founder & Managing Director
+                  Founder Director
                 </span>
                 <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                  P&C Art Arena
+                  Parveen & Chatterjee OPC Pvt. Ltd.
                 </span>
               </div>
             </div>
 
             <div className="prose prose-lg max-w-none">
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Bilkes Perveen, the Director of P&C Group, brings with her *over
+                Bilkes Perveen, CEO of P&C Group, brings with her over
                 a decade of corporate experience, before choosing to follow her
                 passion and carve a new path in the world of fashion and
                 empowerment. Today, she is a Enreprenuer, successful model,Show
@@ -83,15 +83,37 @@ export default function DirectorDeskPage() {
               </p> */}
             </div>
 
-            {/* Contact Button */}
+            {/* Social Media Links */}
             <div className="pt-4">
-              <button
-                onClick={scrollToConnect}
-                className="inline-flex items-center gap-3 px-8 py-4 bg-accent hover:bg-accent/90 text-white rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25 hover:scale-105"
-              >
-                <Phone className="w-5 h-5" />
-                Get in Touch
-              </button>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://www.instagram.com/bilkesperveen?igsh=ejYyMHlkdnh4cmMw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                >
+                  <Instagram className="w-6 h-6" />
+                  <span className="font-medium">Instagram</span>
+                </a>
+                <a
+                  href="https://www.facebook.com/bilkesperveen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 px-6 py-3 bg-blue-600 text-white hover:bg-blue-700 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                >
+                  <Facebook className="w-6 h-6" />
+                  <span className="font-medium">Facebook</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/bilkes-perveen-2536a3177/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 px-6 py-3 bg-blue-700 text-white hover:bg-blue-800 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                >
+                  <Linkedin className="w-6 h-6" />
+                  <span className="font-medium">LinkedIn</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -151,32 +173,47 @@ export default function DirectorDeskPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-gradient-to-br from-accent/5 to-accent/10 rounded-2xl hover:shadow-lg transition-all duration-300">
+            <div 
+              className="relative text-center p-8 rounded-2xl hover:shadow-lg transition-all duration-300 overflow-hidden bg-cover bg-center"
+              style={{ 
+                backgroundImage: 'linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(236, 72, 153, 0.1)), url("/milestones-2.jpg")'
+              }}
+            >
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
-                  <Trophy className="w-8 h-8 text-accent" />
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                  <Trophy className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h4 className="text-2xl font-bold text-accent mb-2">5+</h4>
-              <p className="text-muted-foreground">Successful Seasons</p>
+              <h4 className="text-2xl font-bold text-white mb-2">5+</h4>
+              <p className="text-white/90 font-medium">Successful Seasons</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-accent/5 to-accent/10 rounded-2xl hover:shadow-lg transition-all duration-300">
+            <div 
+              className="relative text-center p-8 rounded-2xl hover:shadow-lg transition-all duration-300 overflow-hidden bg-cover bg-center"
+              style={{ 
+                backgroundImage: 'linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(236, 72, 153, 0.1)), url("/participants.jpg")'
+              }}
+            >
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
-                  <Users className="w-8 h-8 text-accent" />
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                  <Users className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h4 className="text-2xl font-bold text-accent mb-2">100+</h4>
-              <p className="text-muted-foreground">Talented Participants</p>
+              <h4 className="text-2xl font-bold text-white mb-2">500+</h4>
+              <p className="text-white/90 font-medium">Talented Participants</p>
             </div>
-            <div className="text-center p-8 bg-gradient-to-br from-accent/5 to-accent/10 rounded-2xl hover:shadow-lg transition-all duration-300">
+            <div 
+              className="relative text-center p-8 rounded-2xl hover:shadow-lg transition-all duration-300 overflow-hidden bg-cover bg-center"
+              style={{ 
+                backgroundImage: 'linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(236, 72, 153, 0.1)), url("/media.jpg")'
+              }}
+            >
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
-                  <Star className="w-8 h-8 text-accent" />
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                  <Star className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h4 className="text-2xl font-bold text-accent mb-2">50+</h4>
-              <p className="text-muted-foreground">Success Stories</p>
+              <h4 className="text-2xl font-bold text-white mb-2">500+</h4>
+              <p className="text-white/90 font-medium">Media Coverage</p>
             </div>
           </div>
         </div>
@@ -210,6 +247,15 @@ export default function DirectorDeskPage() {
             >
               <Facebook className="w-6 h-6" />
               <span className="font-medium">Facebook</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/bilkes-perveen-2536a3177/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 px-6 py-3 bg-blue-700 text-white hover:bg-blue-800 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            >
+              <Linkedin className="w-6 h-6" />
+              <span className="font-medium">LinkedIn</span>
             </a>
           </div>
         </div>
