@@ -21,7 +21,7 @@ export default function OtherProjectsPage() {
       description:
         "Professional calendar shoots featuring talented models in contemporary themes and seasonal concepts.",
       icon: Calendar,
-      category: "Photography",
+      category: "Conceptional",
       color: "from-blue-500 to-cyan-500",
       image: "/eng-calender.jpg",
     },
@@ -145,51 +145,8 @@ export default function OtherProjectsPage() {
       icon: Camera,
       category: "Commercial",
       color: "from-gray-500 to-slate-600",
-      svgPlaceholder: (
-        <svg
-          className="w-full h-full"
-          viewBox="0 0 400 300"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="400" height="300" fill="url(#gradient5)" />
-          <defs>
-            <linearGradient id="gradient5" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#6b7280" />
-              <stop offset="100%" stopColor="#475569" />
-            </linearGradient>
-          </defs>
-          <rect
-            x="50"
-            y="80"
-            width="300"
-            height="140"
-            rx="20"
-            fill="white"
-            fillOpacity="0.9"
-          />
-          <rect
-            x="120"
-            y="100"
-            width="160"
-            height="100"
-            rx="10"
-            fill="#6b7280"
-          />
-          <circle cx="200" cy="150" r="30" fill="white" />
-          <circle cx="200" cy="150" r="20" fill="#475569" />
-          <rect x="90" y="110" width="20" height="10" rx="5" fill="#6b7280" />
-          <rect x="290" y="110" width="20" height="10" rx="5" fill="#6b7280" />
-          <text
-            x="200"
-            y="240"
-            textAnchor="middle"
-            className="fill-gray-600 text-lg font-bold"
-          >
-            Brand Photography
-          </text>
-        </svg>
-      ),
+      image : "/brand-shoots.jpg",
+      
     },
     {
       id: 6,

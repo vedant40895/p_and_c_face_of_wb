@@ -204,16 +204,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-700/50 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center gap-6">
+        <div className="border-t border-slate-700/50 py-6">
+          <div className="flex flex-col gap-4">
+            {/* Copyright and Designer Credit */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
               <div className="flex items-center gap-2">
-                <Heart className="w-4 h-4 text-red-400" />
+                {/* <Heart className="w-4 h-4 text-red-400" /> */}
                 <p className="text-slate-400 text-sm">
-                  © P&C Face of West Bengal.
+                  © 2025 P&C Face of West Bengal.
                 </p>
               </div>
-              <div className="flex items-center gap-3 text-slate-400 text-base">
+              <div className="flex items-center gap-3 text-slate-400 text-sm">
                 <span className="font-medium">Designed by Vedant Khanna</span>
                 <a 
                   href="https://www.linkedin.com/in/vedant-khanna-aaa48a258/" 
@@ -233,7 +234,9 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-            <div className="flex gap-8 text-sm">
+            
+            {/* Policy Links */}
+            <div className="flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm justify-center sm:justify-start">
               <a href="#" className="text-slate-400 hover:text-accent transition-colors duration-300">
                 Privacy Policy
               </a>

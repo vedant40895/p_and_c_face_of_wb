@@ -118,12 +118,34 @@ export default function Header() {
                 Apply Now
               </button>
             </Link>
-            <Link href="/seasons">
+            <Link href="/">
               <button
                 onClick={() => scrollToSection("seasons")}
                 className="block w-full text-left px-3 py-2 text-sm font-medium hover:text-accent"
               >
                 Past Seasons
+              </button>
+            </Link>
+            <Link href="/other-projects">
+              <button
+                onClick={() => {
+                  scrollToSection("other-projects");
+                  setIsOpen(false);
+                }}
+                className="block w-full text-left px-3 py-2 text-sm font-medium hover:text-accent"
+              >
+                Other Projects
+              </button>
+            </Link>
+            <Link href="/director-desk">
+              <button
+                onClick={() => {
+                  scrollToSection("director-desk");
+                  setIsOpen(false);
+                }}
+                className="block w-full text-left px-3 py-2 text-sm font-medium hover:text-accent"
+              >
+                Director's Desk
               </button>
             </Link>
             <button
