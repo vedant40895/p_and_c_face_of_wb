@@ -32,7 +32,7 @@ export default function Hero() {
             P&C Face
           </span>
           <br />
-          <span className="text-foreground">of West Bengal</span>
+          <span className="text-foreground bg-gradient-to-r from-accent via-accent to-accent/70 bg-clip-text text-transparent">of West Bengal</span>
         </h1>
 
         {/* Description */}
