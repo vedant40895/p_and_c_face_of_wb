@@ -47,55 +47,14 @@ export default function OtherProjectsPage() {
     },
     {
       id: 4,
-      title: "Diwali Shoot",
+      title: "Portfolio Shoot",
       description:
-        "Vibrant photography showcasing the festival of lights with traditional and contemporary themes.",
+        "Professional portfolio photography sessions showcasing individual talent with creative and contemporary styling.",
       icon: Sparkles,
-      category: "Festival",
+      category: "Photography",
       color: "from-yellow-500 to-orange-500",
-      svgPlaceholder: (
-        <svg
-          className="w-full h-full"
-          viewBox="0 0 400 300"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="400" height="300" fill="url(#gradient4)" />
-          <defs>
-            <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#eab308" />
-              <stop offset="100%" stopColor="#f97316" />
-            </linearGradient>
-          </defs>
-          <rect
-            x="50"
-            y="60"
-            width="300"
-            height="180"
-            rx="15"
-            fill="white"
-            fillOpacity="0.9"
-          />
-          <ellipse cx="120" cy="120" rx="15" ry="25" fill="#eab308" />
-          <ellipse cx="160" cy="115" rx="15" ry="30" fill="#f97316" />
-          <ellipse cx="200" cy="110" rx="15" ry="35" fill="#eab308" />
-          <ellipse cx="240" cy="115" rx="15" ry="30" fill="#f97316" />
-          <ellipse cx="280" cy="120" rx="15" ry="25" fill="#eab308" />
-          <circle cx="100" cy="180" r="4" fill="#f97316" />
-          <circle cx="150" cy="185" r="4" fill="#eab308" />
-          <circle cx="200" cy="180" r="4" fill="#f97316" />
-          <circle cx="250" cy="185" r="4" fill="#eab308" />
-          <circle cx="300" cy="180" r="4" fill="#f97316" />
-          <text
-            x="200"
-            y="210"
-            textAnchor="middle"
-            className="fill-yellow-600 text-lg font-bold"
-          >
-            Diwali Celebration
-          </text>
-        </svg>
-      ),
+      image : "/pf-shoot.jpg",
+    
     },
     {
       id: 5,
@@ -116,46 +75,7 @@ export default function OtherProjectsPage() {
       icon: GraduationCap,
       category: "Training",
       color: "from-emerald-500 to-teal-500",
-      svgPlaceholder: (
-        <svg
-          className="w-full h-full"
-          viewBox="0 0 400 300"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="400" height="300" fill="url(#gradient6)" />
-          <defs>
-            <linearGradient id="gradient6" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#10b981" />
-              <stop offset="100%" stopColor="#14b8a6" />
-            </linearGradient>
-          </defs>
-          <rect
-            x="50"
-            y="60"
-            width="300"
-            height="180"
-            rx="15"
-            fill="white"
-            fillOpacity="0.9"
-          />
-          <circle cx="150" cy="120" r="25" fill="#10b981" />
-          <circle cx="150" cy="115" r="15" fill="white" />
-          <rect x="120" y="145" width="60" height="40" rx="20" fill="#14b8a6" />
-          <circle cx="250" cy="120" r="25" fill="#10b981" />
-          <circle cx="250" cy="115" r="15" fill="white" />
-          <rect x="220" y="145" width="60" height="40" rx="20" fill="#14b8a6" />
-          <path d="M200 200 L210 180 L220 200 L210 190 Z" fill="#10b981" />
-          <text
-            x="200"
-            y="220"
-            textAnchor="middle"
-            className="fill-emerald-600 text-lg font-bold"
-          >
-            Grooming & Styling
-          </text>
-        </svg>
-      ),
+      image: "/grooming.jpg",
     },
     {
       id: 7,
