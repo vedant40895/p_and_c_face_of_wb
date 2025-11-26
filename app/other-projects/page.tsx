@@ -121,13 +121,13 @@ export default function OtherProjectsPage() {
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:scale-105"
               >
                 {/* Project Image/SVG */}
-                <div className={`relative overflow-hidden ${project.id === 7 ? 'h-120' : 'h-64'}`}>
+                <div className={`relative overflow-hidden ${project.id === 7 ? 'h-80 sm:h-120' : 'h-48 sm:h-64'}`}>
                   {project.image ? (
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover"
+                      className="object-contain sm:object-cover"
                     />
                   ) : (
                     <div className="w-full h-full">{project.image}</div>

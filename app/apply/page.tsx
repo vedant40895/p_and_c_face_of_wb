@@ -1,4 +1,4 @@
- "use client"
+"use client"
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -41,7 +41,7 @@ export default function ApplyPage() {
   const handleInterestChange = (interest: string, checked: boolean) => {
     setFormData(prev => ({
       ...prev,
-      interests: checked 
+      interests: checked
         ? [...prev.interests, interest]
         : prev.interests.filter(i => i !== interest)
     }))
@@ -56,45 +56,45 @@ export default function ApplyPage() {
 
   const validateForm = () => {
     const requiredFields = [
-      'fullName', 'email', 'phone', 'age', 'city', 'height', 
+      'fullName', 'email', 'phone', 'age', 'city', 'height',
       'weight', 'education', 'profession', 'talents', 'whyParticipate'
     ]
-    
+
     for (const field of requiredFields) {
       const value = formData[field as keyof typeof formData]
       if (typeof value === 'string' && !value.trim()) {
         return false
       }
     }
-    
+
     // Check if at least one interest is selected
     if (formData.interests.length === 0) {
       return false
     }
-    
+
     // Check if disclaimer is agreed
     if (!formData.disclaimerAgreed) {
       return false
     }
-    
+
     // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(formData.email)) {
       return false
     }
-    
+
     // Age validation
     const age = parseInt(formData.age)
     if (age < 18 || age > 30) {
       return false
     }
-    
+
     return true
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!validateForm()) {
       toast({
         title: "Form Validation Error",
@@ -103,9 +103,9 @@ export default function ApplyPage() {
       })
       return
     }
-    
+
     setIsSubmitting(true)
-    
+
     try {
       // Call both APIs simultaneously
       const [emailResponse, submitResponse] = await Promise.all([
@@ -120,7 +120,7 @@ export default function ApplyPage() {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-          }, 
+          },
           body: JSON.stringify(formData),
         })
       ])
@@ -132,16 +132,16 @@ export default function ApplyPage() {
       if (!emailResponse.ok) {
         throw new Error(emailResult.error || 'Failed to send confirmation email')
       }
-      
+
       if (!submitResponse.ok) {
         throw new Error(submitResult.error || 'Failed to notify admin')
       }
-      
+
       toast({
         title: "Application Submitted Successfully! 🎉",
         description: "Thank you for applying to P&C Face of West Bengal. Check your email for confirmation.",
       })
-      
+
       // Reset form
       setFormData({
         fullName: "",
@@ -160,7 +160,7 @@ export default function ApplyPage() {
         socialMedia: "",
         disclaimerAgreed: false,
       })
-      
+
     } catch (error) {
       console.error('Submission error:', error)
       toast({
@@ -176,7 +176,7 @@ export default function ApplyPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Header />
-      
+
       <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -203,7 +203,7 @@ export default function ApplyPage() {
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold text-foreground">Personal Information</h3>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 ml-0 sm:ml-14">
                   <div className="space-y-2 sm:space-y-3">
                     <Label htmlFor="fullName" className="text-sm font-medium text-foreground">
@@ -219,7 +219,7 @@ export default function ApplyPage() {
                       required
                     />
                   </div>
-                  
+
                   <div className="space-y-2 sm:space-y-3">
                     <Label htmlFor="email" className="text-sm font-medium text-foreground">
                       Email Address *
@@ -235,7 +235,7 @@ export default function ApplyPage() {
                       required
                     />
                   </div>
-                  
+
                   <div className="space-y-2 sm:space-y-3">
                     <Label htmlFor="phone" className="text-sm font-medium text-foreground">
                       Phone Number *
@@ -251,7 +251,7 @@ export default function ApplyPage() {
                       required
                     />
                   </div>
-                  
+
                   <div className="space-y-2 sm:space-y-3">
                     <Label htmlFor="age" className="text-sm font-medium text-foreground">
                       Age *
@@ -269,7 +269,7 @@ export default function ApplyPage() {
                       required
                     />
                   </div>
-                  
+
                   <div className="space-y-2 sm:space-y-3 md:col-span-2">
                     <Label htmlFor="city" className="text-sm font-medium text-foreground">
                       City *
@@ -295,7 +295,7 @@ export default function ApplyPage() {
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold text-foreground">Physical Attributes</h3>
                 </div>
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 ml-0 sm:ml-14">
                   <div className="space-y-2 sm:space-y-3">
                     <Label htmlFor="height" className="text-sm font-medium text-foreground">
@@ -312,7 +312,7 @@ export default function ApplyPage() {
                       required
                     />
                   </div>
-                  
+
                   <div className="space-y-2 sm:space-y-3">
                     <Label htmlFor="weight" className="text-sm font-medium text-foreground">
                       Weight (in kg) *
@@ -339,7 +339,7 @@ export default function ApplyPage() {
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold text-foreground">Background Information</h3>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 ml-0 sm:ml-14">
                   <div className="space-y-2 sm:space-y-3">
                     <Label htmlFor="education" className="text-sm font-medium text-foreground">
@@ -355,7 +355,7 @@ export default function ApplyPage() {
                       required
                     />
                   </div>
-                  
+
                   <div className="space-y-2 sm:space-y-3">
                     <Label htmlFor="profession" className="text-sm font-medium text-foreground">
                       Current Profession *
@@ -370,7 +370,7 @@ export default function ApplyPage() {
                       required
                     />
                   </div>
-                  
+
                   <div className="space-y-2 sm:space-y-3 md:col-span-2">
                     <Label className="text-sm font-medium text-foreground">
                       What are you interested in? *
@@ -397,7 +397,7 @@ export default function ApplyPage() {
                       ))}
                     </div>
                   </div>
-                  
+
                   <div className="space-y-2 sm:space-y-3 md:col-span-2">
                     <Label htmlFor="experience" className="text-sm font-medium text-foreground">
                       Previous Pageant/Modeling Experience
@@ -423,7 +423,7 @@ export default function ApplyPage() {
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold text-foreground">Talents & Motivation</h3>
                 </div>
-                
+
                 <div className="space-y-6 sm:space-y-8 ml-0 sm:ml-14">
                   <div className="space-y-2 sm:space-y-3">
                     <Label htmlFor="talents" className="text-sm font-medium text-foreground">
@@ -483,12 +483,22 @@ export default function ApplyPage() {
                           ⚠️
                         </div>
                         <div className="space-y-3">
-                          <p className="text-sm sm:text-base text-amber-800 dark:text-amber-200 leading-relaxed">
-                            Before proceeding, please note that <span className="font-semibold">all projects, sessions, and campaigns involve associated fees</span>.
-                            <br />
-                            By filling out the form, <span className="font-semibold">you acknowledge and agree</span> to the payment of these fees as applicable.
-                          </p>
-                          
+                          <div className="text-xs sm:text-sm text-amber-800 dark:text-amber-200 leading-relaxed space-y-3">
+                            <p className="font-bold text-sm">Registration & Consultation Policy</p>
+
+                            <p>
+                              Please note that a <span className="font-bold">minimum fee of ₹2500</span> is applicable when you fill out the form for <span className="font-bold">any project</span> under Perveen & Chatterjee OPC Pvt Ltd.
+                            </p>
+
+                            <p>
+                              This fee is <span className="font-bold">mandatory and non-refundable</span>, as it confirms your interest and initiates the evaluation process.
+                            </p>
+
+                            <p>
+                              Kindly <span className="font-bold">fill the form and make the payment</span> by calling <span className="font-bold">7980901539</span> for payment assistance.
+                            </p>
+                          </div>
+
                           <label className="flex items-start gap-3 cursor-pointer group">
                             <input
                               type="checkbox"
@@ -512,9 +522,24 @@ export default function ApplyPage() {
               <div className="pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-border/20">
                 <div className="flex flex-col gap-4 sm:gap-6">
                   <div className="order-2 sm:order-1">
+                    <div className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left leading-relaxed space-y-3 mb-4">
+                      <p>
+                        Your application will be processed <span className="font-bold">only after the fee is received</span>.
+                      </p>
+                      
+                      <p>
+                        Once your registration is confirmed, you will receive a <span className="font-bold">consultation call</span>, during which the details of the project, additional fees involved, and the next steps will be discussed thoroughly post which you can decide whether to participate or not in any projects.
+                      </p>
+                      
+                      <p>
+                        We look forward to guiding you towards the right opportunities with transparency and professionalism.
+                      </p>
+                    </div>
+                    
                     <p className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left leading-relaxed">
                       By submitting this application, you agree to our terms and conditions and consent to the processing of your personal data.
                     </p>
+
                   </div>
                   <div className="order-1 sm:order-2 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
                     <Button
