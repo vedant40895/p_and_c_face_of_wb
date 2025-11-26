@@ -521,7 +521,7 @@ export default function ApplyPage() {
               {/* Submit Section */}
               <div className="pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-border/20">
                 <div className="flex flex-col gap-4 sm:gap-6">
-                  <div className="order-2 sm:order-1">
+                  <div className="order-1">
                     <div className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left leading-relaxed space-y-3 mb-4">
                       <p>
                         Your application will be processed <span className="font-bold">only after the fee is received</span>.
@@ -541,7 +541,7 @@ export default function ApplyPage() {
                     </p>
 
                   </div>
-                  <div className="order-1 sm:order-2 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+                  <div className="order-2 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
                     <Button
                       type="button"
                       variant="outline"
