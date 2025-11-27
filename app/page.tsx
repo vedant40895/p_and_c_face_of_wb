@@ -10,6 +10,13 @@ import Footer from "@/components/footer"
 export default function Home() {
   const [showButton, setShowButton] = useState(false)
   const [buttonBottom, setButtonBottom] = useState('2rem')
+  const [currentSlide, setCurrentSlide] = useState(0)
+  
+  const season5Slides = [
+    "/season-5.jpg",
+    "/season-5(2).jpg"
+  ]
+  
   const [seasons] = useState([
     {
       id: 1,
@@ -48,6 +55,7 @@ export default function Home() {
       title: "Season 5",
       year: 2025,
       image: "/season-5.jpg",
+      slides: season5Slides,
       description: "The most successful season yet, showcasing the best talent West Bengal has to offer.",
     },
   ])
@@ -89,6 +97,15 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Season 5 slideshow effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % season5Slides.length)
+    }, 2500) // Change slide every 2 seconds
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Header />
@@ -107,7 +124,13 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-12">
             {seasons.map((season, index) => (
-              <SeasonCard key={season.id} season={season} index={index} />
+              <SeasonCard 
+                key={season.id} 
+                season={season} 
+                index={index}
+                currentSlide={season.id === 5 ? currentSlide : undefined}
+                setCurrentSlide={season.id === 5 ? setCurrentSlide : undefined}
+              />
             ))}
           </div>
         </div>

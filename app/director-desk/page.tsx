@@ -118,6 +118,82 @@ export default function DirectorDeskPage() {
           </div>
         </div>
 
+        {/* Co-Founder Profile Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+          {/* Co-Founder Info */}
+          <div className="space-y-8 lg:order-1">
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
+                Tanmay Chatterjee
+              </h2>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-4 py-2 bg-accent text-white rounded-full text-sm font-medium">
+                  Co-Founder & Managing Director
+                </span>
+                <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                  Parveen & Chatterjee OPC Pvt. Ltd.
+                </span>
+              </div>
+            </div>
+
+            <div className="prose prose-lg max-w-none">
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                Tanmay Chatterjee, a senior corporate leader with over 15 years of experience, is the strong foundation and true backbone of this organisation. His vision and support laid the pillars on which Perveen & Chatterjee OPC Pvt Ltd thrives today. He broke the stereotype that women cannot achieve anything after marriage by supporting his own wife Bilkes Perveen to take this bold step of doing something new, proving that behind every successful woman. With his corporate expertise and open-minded approach, Tanmay fosters a culture of equality and growth.
+              </p>
+            </div>
+
+            {/* Social Media Links */}
+            {/* <div className="pt-4">
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                >
+                  <Instagram className="w-6 h-6" />
+                  <span className="font-medium">Instagram</span>
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 px-6 py-3 bg-blue-600 text-white hover:bg-blue-700 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                >
+                  <Facebook className="w-6 h-6" />
+                  <span className="font-medium">Facebook</span>
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 px-6 py-3 bg-blue-700 text-white hover:bg-blue-800 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                >
+                  <Linkedin className="w-6 h-6" />
+                  <span className="font-medium">LinkedIn</span>
+                </a>
+              </div>
+            </div> */}
+          </div>
+
+          {/* Co-Founder Image */}
+          <div className="relative group lg:order-2">
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-3xl rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+            <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
+              <div className="aspect-[4/5] bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl overflow-hidden">
+                <Image
+                  src="/co-founder.jpg"
+                  alt="Co-Founder & Managing Director"
+                  width={400}
+                  height={500}
+                  className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-500"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Vision & Mission Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           {/* Vision */}
