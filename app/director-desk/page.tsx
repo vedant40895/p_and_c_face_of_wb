@@ -62,7 +62,7 @@ export default function DirectorDeskPage() {
                   Founder Director
                 </span>
                 <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                  Parveen & Chatterjee OPC Pvt. Ltd.
+                  perveen & Chatterjee OPC Pvt. Ltd.
                 </span>
               </div>
             </div>
@@ -128,17 +128,17 @@ export default function DirectorDeskPage() {
               </h2>
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 bg-accent text-white rounded-full text-sm font-medium">
-                  Co-Founder & Managing Director
+                  Co-Founder
                 </span>
                 <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                  Parveen & Chatterjee OPC Pvt. Ltd.
+                  perveen & Chatterjee OPC Pvt. Ltd.
                 </span>
               </div>
             </div>
 
             <div className="prose prose-lg max-w-none">
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Tanmay Chatterjee, a senior corporate leader with over 15 years of experience, is the strong foundation and true backbone of this organisation. His vision and support laid the pillars on which Perveen & Chatterjee OPC Pvt Ltd thrives today. He broke the stereotype that women cannot achieve anything after marriage by supporting his own wife Bilkes Perveen to take this bold step of doing something new, proving that behind every successful woman. With his corporate expertise and open-minded approach, Tanmay fosters a culture of equality and growth.
+                Tanmay Chatterjee, a senior corporate leader with over 15 years of experience, is the strong foundation and true backbone of this organisation. His vision and support laid the pillars on which Perveen & Chatterjee OPC Pvt Ltd thrives today. He broke the stereotype that women cannot achieve anything after marriage by supporting his own wife Bilkes Perveen to take this bold step of doing something new, proving that behind every successful woman there can be a man as well. With his corporate expertise and open-minded approach, Tanmay fosters a culture of equality and growth.
               </p>
             </div>
 
