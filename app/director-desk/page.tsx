@@ -62,7 +62,7 @@ export default function DirectorDeskPage() {
                   Founder Director
                 </span>
                 <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                  perveen & Chatterjee OPC Pvt. Ltd.
+                  Perveen & Chatterjee OPC Pvt. Ltd.
                 </span>
               </div>
             </div>
@@ -131,7 +131,7 @@ export default function DirectorDeskPage() {
                   Co-Founder
                 </span>
                 <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                  perveen & Chatterjee OPC Pvt. Ltd.
+                  Perveen & Chatterjee OPC Pvt. Ltd.
                 </span>
               </div>
             </div>
@@ -143,28 +143,10 @@ export default function DirectorDeskPage() {
             </div>
 
             {/* Social Media Links */}
-            {/* <div className="pt-4">
+             <div className="pt-4">
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-                >
-                  <Instagram className="w-6 h-6" />
-                  <span className="font-medium">Instagram</span>
-                </a>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-3 px-6 py-3 bg-blue-600 text-white hover:bg-blue-700 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-                >
-                  <Facebook className="w-6 h-6" />
-                  <span className="font-medium">Facebook</span>
-                </a>
-                <a
-                  href="#"
+                  href="https://www.linkedin.com/in/tanmay-chatterjee-70379331/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-3 px-6 py-3 bg-blue-700 text-white hover:bg-blue-800 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
@@ -173,7 +155,7 @@ export default function DirectorDeskPage() {
                   <span className="font-medium">LinkedIn</span>
                 </a>
               </div>
-            </div> */}
+            </div> 
           </div>
 
           {/* Co-Founder Image */}
