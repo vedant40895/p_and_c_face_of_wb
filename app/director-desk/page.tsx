@@ -120,6 +120,24 @@ export default function DirectorDeskPage() {
 
         {/* Co-Founder Profile Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+          
+          {/* Co-Founder Image */}
+          <div className="relative group lg:order-2">
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-3xl rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+            <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
+              <div className="aspect-[4/5] bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl overflow-hidden">
+                <Image
+                  src="/co-founder.jpg"
+                  alt="Co-Founder & Managing Director"
+                  width={400}
+                  height={500}
+                  className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-500"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+          
           {/* Co-Founder Info */}
           <div className="space-y-8 lg:order-1">
             <div className="space-y-4">
@@ -159,7 +177,7 @@ export default function DirectorDeskPage() {
           </div>
 
           {/* Co-Founder Image */}
-          <div className="relative group lg:order-2">
+          {/* <div className="relative group lg:order-2">
             <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-3xl rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
             <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
               <div className="aspect-[4/5] bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl overflow-hidden">
@@ -173,7 +191,7 @@ export default function DirectorDeskPage() {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Vision & Mission Section */}
